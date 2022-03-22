@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-text: #333;
+    --color-text-faded: #ccc;
+    --color-text-faded-primary: #999;
+    --color-primary: #6D21E9;
+    --color-primary-border: #5B26B1;
+    --color-bg: #EEEEEE;
+    --color-border: #CCCCCC;
+    --color-popular: #E79E12;
+    --color-popular-bg: #F9E1B2;
+    --color-check-bg: #76CE6F;
+
+    --family-roboto: Roboto, sans-serif;
+    --family-montserrat: Montserrat, sans-serif;
+
+    --radius-card: 0.5rem;
+    --radius-btn: 0.25rem;
+
+    --box-shadow: 0 3px 5px rgba(128, 128, 128, 0.5);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background: var(--color-bg);
+    font-size: 16px;
+    font-family: var(--family-roboto);
+    color: var(--color-text);
+}
+
+main {
+    padding: 1em;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: var(--family-montserrat);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background: var(--color-white);
+    border-radius: var(--radius-card);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.card-header {
+    padding: 2rem;
+    border-bottom: thin solid var(--color-border);
+    text-align: center;
+}
+
+.card-popular {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.card-popular .card-header {
+    border-color: var(--color-primary-border);
+}
+
+.card-popular .disabled {
+    color: var(--color-text-faded-primary);
+}
+
+.label {
+    padding: 0.25rem 0.5rem;
+    text-transform: uppercase;
+    font-family: var(--family-montserrat);
+    font-size: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+}
+
+.label-popular {
+    color: var(--color-popular);
+    background: var(--color-popular-bg);
+}
+
+.price {
+    font-size: 3rem;
+}
+
+sup {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.number {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: var(--family-montserrat);
+    font-size: 2.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-block-start: auto;
+    margin-block-end: auto;
+    font-size: 2rem;
+}
+
+.disabled {
+    color: var(--color-text-faded);
+}
+
+.fas {
+    color: var(--color-check-bg);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: var(--radius-btn);
+    font-family: var(--family-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-block {
+    /* display: block; */
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-popular {
+    background: var(--color-white);
+    color: var(--color-primary);
+}
