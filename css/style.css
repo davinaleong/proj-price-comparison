@@ -113,16 +113,26 @@ h1 {
 
 .price {
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
-sup {
+.dollar {
   font-size: 2rem;
   font-weight: normal;
+  margin-top: 0.5rem;
+  margin-right: 0.25rem;
 }
 
 .number {
   font-size: 6rem;
   font-weight: bold;
+}
+
+.per-month {
+  text-transform: uppercase;
+  align-self: flex-end;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -150,7 +160,7 @@ ul {
   gap: 0.5rem;
   margin-block-start: auto;
   margin-block-end: auto;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2.5rem);
 }
 
 .inactive {
