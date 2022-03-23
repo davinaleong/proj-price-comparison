@@ -63,19 +63,19 @@ main {
   min-height: 100vh;
 }
 
-h1 {
+.page-title {
   font-family: var(--family-montserrat);
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.cards {
+.price-table {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.card {
+.price-column {
   display: flex;
   flex-direction: column;
   background: var(--color-white);
@@ -85,16 +85,16 @@ h1 {
   position: relative;
 }
 
-.card-popular {
+.price-column-popular {
   background: var(--color-primary);
   color: var(--color-white);
 }
 
-.card-header {
+.price-column-header {
   text-align: center;
 }
 
-.label {
+.price-label {
   padding: 0.25rem 0.5rem;
   text-transform: uppercase;
   font-family: var(--family-montserrat);
@@ -106,7 +106,7 @@ h1 {
   font-weight: bold;
 }
 
-.label-popular {
+.price-label-popular {
   color: var(--color-popular);
   background: var(--color-popular-bg);
 }
@@ -117,32 +117,32 @@ h1 {
   justify-content: center;
 }
 
-.dollar {
+.price > .dollar {
   font-size: 2rem;
   font-weight: normal;
   margin-top: 0.5rem;
   margin-right: 0.25rem;
 }
 
-.number {
+.price > .number {
   font-size: 6rem;
   font-weight: bold;
 }
 
-.per-month {
+.price > .per-month {
   text-transform: uppercase;
   align-self: flex-end;
   margin-bottom: 1rem;
 }
 
-h2 {
+.price-title {
   font-family: var(--family-montserrat);
   font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-hr {
+.price-divider {
   height: 1px;
   border-top: thin solid var(--color-border);
   margin-top: 2rem;
@@ -150,11 +150,11 @@ hr {
   opacity: 0.1;
 }
 
-.card-popular hr {
+.price-column-popular .price-divider {
   border-top: thin solid var(--color-border-popular);
 }
 
-.features {
+.price-features {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -167,7 +167,7 @@ hr {
   color: var(--color-text-faded);
 }
 
-.card-popular .inactive {
+.price-column-popular .inactive {
   color: var(--color-text-faded-primary);
 }
 
@@ -179,7 +179,7 @@ hr {
   color: var(--color-times);
 }
 
-.btn {
+.btn-price {
   display: inline-block;
   text-decoration: none;
   padding: 0.8rem 2rem;
@@ -192,6 +192,8 @@ hr {
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
   margin-top: 2rem;
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn:hover,
@@ -203,12 +205,7 @@ hr {
   display: block;
 }
 
-.btn-primary {
-  background: var(--color-primary);
-  color: var(--color-white);
-}
-
-.btn-popular {
+.price-column-popular .btn-price {
   background: var(--color-white);
   color: var(--color-primary);
 }
@@ -218,27 +215,27 @@ hr {
     margin-bottom: 5rem;
   }
 
-  .cards {
+  .price-table {
     flex-direction: row;
     gap: 0;
   }
 
-  .card {
+  .price-column {
     width: 33%;
   }
 
-  .card:nth-of-type(1) {
+  .price-column:nth-of-type(1) {
     border-radius: var(--radius-card) 0 0 var(--radius-card);
   }
 
-  .card-popular {
+  .price-column-popular {
     margin-top: -2rem;
     margin-bottom: -2rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
 
-  .card:nth-of-type(3) {
+  .price-column:nth-of-type(3) {
     border-radius: 0 var(--radius-card) var(--radius-card) 0;
   }
 }
@@ -248,11 +245,11 @@ hr {
     padding: 3rem 7rem;
   }
 
-  .card {
+  .price-column {
     padding: 3rem;
   }
 
-  .card-popular {
+  .price-column-popular {
     margin-top: -2rem;
     margin-bottom: -2rem;
     padding-top: 5rem;
