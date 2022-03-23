@@ -9,8 +9,8 @@
   --color-primary: #6d21e9;
   --color-primary-border: #5b26b1;
   --color-bg: #eeeeee;
-  --color-border: rgba(0, 0, 0, 0.1);
-  --color-border-popular: rgba(255, 255, 255, 0.1);
+  --color-border: #000;
+  --color-border-popular: #fff;
   --color-popular: #e79e12;
   --color-popular-bg: #f9e1b2;
   --color-check: #76ce6f;
@@ -142,15 +142,16 @@ h2 {
   text-transform: uppercase;
 }
 
-.divider {
+hr {
   height: 1px;
-  background: var(--color-border);
+  border-top: thin solid var(--color-border);
   margin-top: 2rem;
   margin-bottom: 2rem;
+  opacity: 0.1;
 }
 
-.card-popular .divider {
-  background: var(--color-border-popular);
+.card-popular hr {
+  border-top: thin solid var(--color-border-popular);
 }
 
 .features {
